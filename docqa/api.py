@@ -136,7 +136,9 @@ def _sse(events, request_id: str):
 
 @app.get("/", include_in_schema=False)
 def home():
-    return FileResponse(STATIC / "index.html")
+    # no-cache: the browser must check for a newer page each time, so an updated page is never
+    # hidden behind a stale cached copy. Unchanged pages still answer with a cheap 304.
+    return FileResponse(STATIC / "index.html", headers={"Cache-Control": "no-cache"})
 
 
 @app.post("/ask", dependencies=[Depends(rate_limit)])

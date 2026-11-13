@@ -62,7 +62,9 @@ def test_api_key_protects_everything_except_health_and_the_page(tmp_index, monke
     monkeypatch.setattr(settings, "api_key", "secret")
     with TestClient(api.app) as client:
         assert client.get("/health").status_code == 200
-        assert client.get("/").status_code == 200 and "Document Q&amp;A" in client.get("/").text
+        page = client.get("/")
+        assert page.status_code == 200 and "Document Q&amp;A" in page.text
+        assert page.headers["Cache-Control"] == "no-cache"  # an updated page must not be served stale
         assert client.get("/documents").status_code == 401
         assert client.get("/documents", headers={"X-API-Key": "secret"}).status_code == 200
 

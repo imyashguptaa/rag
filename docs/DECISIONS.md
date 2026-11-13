@@ -201,8 +201,17 @@ endpoints. A React build would add a toolchain and a second deploy artefact for 
 markup into the page. Only `**bold**` and `` `code` `` are styled.
 **API key:** the page itself is public. If the server has an `API_KEY`, the page asks for it on
 the first 401 and keeps it in that browser's local storage.
-**Not exercised through the page:** upload and remove. The same endpoints are covered by
-`tests/test_pipeline.py`, but the buttons were not clicked against the evaluation corpus.
+**Choosing a file to upload:** a real "Choose a PDF" button at the top of the Documents panel,
+and drag-and-drop anywhere on the page. The first version hid the file input with
+`display: none` inside a label at the bottom of the panel, and a user could not upload with it:
+no upload request ever reached the server. Hidden-by-`display:none` inputs do not open the file
+picker in every browser, and the control sat below the document list. The input is now only
+visually hidden and is opened by the button.
+**Page caching:** `/` is sent with `Cache-Control: no-cache`. Without it the browser kept
+showing an old copy of the page after the file changed, which hid the fix above.
+**Checked in a browser:** the button calls the file picker, a dropped PDF is uploaded, indexed
+and listed, and a dropped non-PDF is refused with a message. **Not checked:** the operating
+system's file dialog itself, which test tools cannot drive.
 
 ### SQLite for app state
 **Why:** the document registry, sessions and latency log are small relational data. SQLite is

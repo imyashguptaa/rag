@@ -101,9 +101,15 @@
   .doc-info { font-size: 12px; color: var(--muted); }
   .doc .btn { margin-left: auto; font-size: 12px; padding: 4px 9px; }
   .doc .btn.sure { border-color: var(--danger); color: var(--danger); }
-  .upload { display: block; margin-top: 16px; padding: 14px; border: 1px dashed var(--line); border-radius: 10px; text-align: center; color: var(--muted); cursor: pointer; }
-  .upload:hover { border-color: var(--accent); color: var(--accent); }
-  .upload input { display: none; }
+  .upload { padding: 16px 14px; border: 1px dashed var(--line); border-radius: 10px; text-align: center; color: var(--muted); }
+  .upload p { margin: 8px 0 0; font-size: 13px; }
+  .upload.over, body.dragging .upload { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: transparent; font-weight: 600; }
+  .btn.primary:hover { background: var(--accent); filter: brightness(1.08); }
+  .btn.primary:disabled { opacity: .5; cursor: default; }
+  /* Hidden from view but still a real, clickable file input. display:none inputs do not open
+     the file picker in every browser. */
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .note { margin-top: 10px; font-size: 13px; color: var(--muted); }
   .note.bad { color: var(--danger); }
 
@@ -155,9 +161,13 @@
   <aside id="drawer" hidden aria-label="Documents">
     <div class="drawer-head"><h2>Documents</h2><button class="btn" id="closeDrawer" type="button">Close</button></div>
     <div class="drawer-body">
-      <div id="docs"></div>
-      <label class="upload"><input type="file" id="file" accept="application/pdf,.pdf">Add a PDF, or replace one with the same file name</label>
+      <div class="upload" id="drop">
+        <button class="btn primary" id="pick" type="button">Choose a PDF</button>
+        <p>or drag a PDF onto this page. A file with the same name replaces the indexed one.</p>
+        <input class="visually-hidden" type="file" id="file" accept="application/pdf,.pdf" tabindex="-1" aria-hidden="true">
+      </div>
       <p class="note" id="docNote" role="status"></p>
+      <div id="docs"></div>
     </div>
   </aside>
 
@@ -393,10 +403,13 @@ async function refresh() {
 
 function note(message, bad = false) { $("docNote").textContent = message; $("docNote").className = bad ? "note bad" : "note"; }
 
-$("file").onchange = async () => {
-  const file = $("file").files[0];
-  if (!file) return;
-  note("Indexing " + file.name + "… this can take a minute for a long PDF.");
+let uploading = false;
+async function upload(file) {
+  $("drawer").hidden = false;
+  if (uploading) { note("Another upload is still running. Wait for it to finish.", true); return; }
+  if (!/\.pdf$/i.test(file.name)) { note(file.name + " is not a PDF. Only .pdf files can be added.", true); return; }
+  uploading = true; $("pick").disabled = true;
+  note("Uploading and indexing " + file.name + "… this can take a minute for a long PDF.");
   const form = new FormData();
   form.append("file", file);
   try {
@@ -413,9 +426,28 @@ $("file").onchange = async () => {
       else note(job.error || "Indexing failed.", true);
     }
   } catch { note("Upload failed: the server could not be reached.", true); }
-  $("file").value = "";
+  uploading = false; $("pick").disabled = false;
   refresh();
+}
+
+// Two ways to choose a file: the button (opens the file picker) and drag-and-drop anywhere.
+$("pick").onclick = () => $("file").click();
+$("file").onchange = () => {
+  const file = $("file").files[0];
+  $("file").value = "";  // so choosing the same file again still fires a change
+  if (file) upload(file);
 };
+let dragDepth = 0;
+const hasFiles = (event) => event.dataTransfer && [...event.dataTransfer.types].includes("Files");
+window.addEventListener("dragenter", (event) => { if (hasFiles(event)) { dragDepth++; document.body.classList.add("dragging"); $("drawer").hidden = false; } });
+window.addEventListener("dragleave", (event) => { if (hasFiles(event) && --dragDepth <= 0) { dragDepth = 0; document.body.classList.remove("dragging"); } });
+window.addEventListener("dragover", (event) => { if (hasFiles(event)) event.preventDefault(); });  // allow a drop
+window.addEventListener("drop", (event) => {
+  if (!hasFiles(event)) return;
+  event.preventDefault();  // stop the browser from opening the PDF instead
+  dragDepth = 0; document.body.classList.remove("dragging");
+  if (event.dataTransfer.files[0]) upload(event.dataTransfer.files[0]);
+});
 
 $("composer").onsubmit = (event) => {
   event.preventDefault();

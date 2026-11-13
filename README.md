@@ -28,8 +28,9 @@ Step 5 raised recall@10 from 0.94 to 0.97, and ten chunks are passed to the answ
 
 | Measure | Result |
 |---|---|
-| Answer correctness, baseline (all 100 questions) | 53 of 100 |
-| Answer correctness, improved pipeline vs baseline on the same 77 questions | 66 of 77 (86%) vs 48 of 77 (62%) |
+| Answer correctness, baseline (100 questions) | 53 of 100 |
+| Answer correctness, improved pipeline (same 100 questions) | 87 of 100 |
+| Faithfulness: answers fully supported by the excerpts they cite | 92 of 99 answered |
 | Out-of-scope questions refused | 8 of 10 before the LLM is called; the prompt handles the rest |
 | Answerable questions wrongly refused | 0 of 100 |
 | Prompt-injection tests passing | 10 of 10 |
@@ -37,10 +38,12 @@ Step 5 raised recall@10 from 0.94 to 0.97, and ten chunks are passed to the answ
 Things that were tried and rejected (larger chunks, a query instruction prefix, three other
 rerankers) are recorded with their numbers in [docs/DECISIONS.md](docs/DECISIONS.md).
 
-**Read the numbers with these limits in mind.** The improved answer-correctness run covers 77
-of the 100 questions (the free API quota ran out) and used a different answer model from the
-baseline. The questions were written by the same person who built the system and are mostly
-single-fact questions in clean English. See [Status](#status).
+**Read the numbers with these limits in mind.** The baseline and the improved pipeline were
+answered by different models (`gpt-oss-120b` and `qwen3.8-27b`) because of the free API quota,
+so part of the 53 → 87 gain may come from the model and not from retrieval. Correctness and
+faithfulness are graded by an LLM judge, which is not perfect. The questions were written by
+the same person who built the system and are mostly single-fact questions in clean English.
+See [Status](#status).
 
 ## How it works
 
@@ -201,10 +204,9 @@ Not done yet:
 - **Latency target.** The benchmark for cutting p95 with caching and model routing
   (`scripts/latency_bench.py`) has not completed a run. Retrieval takes about 480 ms, almost
   all of it the reranker.
-- **Full answer-correctness run.** 77 of 100 questions are answered for the improved pipeline;
-  the run resumes where it stopped.
-- **Faithfulness metric.** Implemented in the evaluation runner, not yet measured on the full
-  set.
+- **Same-model comparison.** The baseline and improved answer runs used different answer
+  models. Rerunning the improved pipeline on the baseline's model needs more than one day of
+  the free quota.
 - **Languages.** The embedding model is English-only; Hinglish queries are untested.
 
 ## Deploy on Render

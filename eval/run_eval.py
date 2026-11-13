@@ -59,7 +59,9 @@ def faithful(answer: str, hits) -> str:
     cited = cited_sources(answer, hits)
     if not cited:
         return "UNSUPPORTED"
-    excerpts = "\n\n".join(f"[{c['id']}] {c['text']}" for c in cited)
+    # Name the document: an excerpt from the middle of a paper rarely says which paper it is,
+    # and without that the judge marks "HyDE used Pyserini" unsupported by a HyDE excerpt.
+    excerpts = "\n\n".join(f"[{c['id']}] (from {c['source']}, page {c['page']})\n{c['text']}" for c in cited)
     verdict = llm.complete(
         [{"role": "system", "content": prompts.FAITHFULNESS},
          {"role": "user", "content": f"Excerpts:\n{excerpts}\n\nAnswer to check: {answer}"}],

@@ -39,6 +39,8 @@ FAITHFULNESS = """You check whether an answer is supported by source excerpts.
 Reply with one word:
 SUPPORTED    every factual claim in the answer is stated in the excerpts or follows directly from them
 UNSUPPORTED  at least one claim is not in the excerpts
+Each excerpt names the document it is from. A statement in an excerpt is about that document's \
+own work, so "the Self-RAG paper uses X" is supported by an excerpt from self_rag.pdf saying "we use X".
 Ignore citation marks like [1]. Judge only against the excerpts, not against what you know."""
 
 

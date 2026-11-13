@@ -340,10 +340,8 @@ material for new evaluation questions written by real users.
 claim in an answer is supported by the excerpts it cites. An answer with no citation counts as
 unsupported. Correctness asks "is it right?"; faithfulness asks "can the reader verify it from
 the cited pages?". An answer can be right from the model's own memory and still unfaithful.
-**Not measured yet:** the metric was added after the last full run. It will be filled in by
-the next one. A 4-question smoke run gave 2 of 4 supported with all 4 correct. That is far too
-few to read as a rate, and nobody has yet checked whether those two are real unsupported claims
-or a strict judge. Read the verdicts by hand after the first full run before trusting the number.
+**Measured:** 92 of 99 answered questions supported. See the experiment log for the caveats and
+for the judge bug that was fixed on the way.
 **Bug found while adding it:** the evaluation did not convert the model's full-width citation
 brackets to `[n]`, so it saw no citations at all. The conversion now lives in one function,
 `plain_brackets`, used by both the live pipeline and the evaluation.
@@ -419,23 +417,39 @@ What each step taught:
 |---|---|---|---|---|---|
 | `baseline` | dense, 220, 5 chunks | gpt-oss-120b | 0.53 | 0.02 | 0.45 |
 | `baseline_rejudged` | same answers, judge prompt v2 | gpt-oss-120b | 0.53 | 0.00 | 0.47 |
-| `final_qwen` (77 of 100 answered) | hybrid + rerank, 120, title, 10 chunks | qwen3.8-27b | 66 of 77 = 0.86 | 1 of 77 | 10 of 77 |
+| `final_qwen` | hybrid + rerank, 120, title, 10 chunks | qwen3.8-27b | 0.87 | 0.02 | 0.11 |
 | `final` | same as `final_qwen` | gpt-oss-120b | NOT MEASURED | | |
 
-**Like for like on the same 77 questions:** baseline 48 correct (0.62), improved pipeline 66
-correct (0.86). Of the improved pipeline's 77 answers, one was a refusal.
+**All 100 questions:** baseline 53 correct, improved pipeline 87 correct. The improved pipeline
+fixed 37 questions the baseline got wrong and got 3 wrong that the baseline had right. It
+refused once. The run took two sessions (77 questions, then the last 23 after the daily quota
+refilled); the 23 scored 21 correct, so the earlier 77-question figure of 0.86 held up.
 
-**What is still open.** `final_qwen` stopped at question 77 when that model's 200,000-token
-daily quota ran out. The 23 unanswered questions are the last of HyDE and all of Ragas and
-Self-RAG, and Self-RAG holds five of the eleven retrieval misses, so the full-set number will
-probably be lower than 0.86. The answer model also differs from the baseline's (the large
-model's quota was already spent), so part of the gain may come from the model and not from
-retrieval. Two reruns close both gaps, each on a fresh daily quota:
+Per paper (correct of 10): Sentence-BERT 10, HyDE 10, Ragas 10, Transformer 9, BERT 9, BEIR 9,
+DPR 8, Self-RAG 8, ColBERT 7, RAG 7.
+
+**The 13 that are still wrong:** in 3 the gold page is not among the 10 chunks given to the
+model. In the other 10 the page is there and the answer is still wrong or incomplete, so what
+is left is now mostly a generation problem, not a retrieval problem. That is the reverse of the
+baseline.
+
+**What is still open.** The two runs used different answer models: `gpt-oss-120b` for the
+baseline and `qwen3.8-27b` for the improved pipeline, because the large model's daily quota
+was spent. So part of the 34-point gain may come from the model and not from retrieval. A full
+run needs about 260,000 tokens and the free tier allows 200,000 a day per model, so the
+same-model run needs two days or a paid tier:
 
 ```bash
-LLM_MODEL=qwen/qwen3.8-27b python -m eval.run_eval --label final_qwen --answers   # resumes at question 78
-python -m eval.run_eval --label final --answers                                   # same answer model as the baseline
+python -m eval.run_eval --label final --answers   # same answer model as the baseline; resumes if cut off
 ```
+
+**Faithfulness: 92 of 99 answered questions (0.93).** Every claim is supported by the excerpts
+the answer cites. Read with care: the seven flagged answers were checked by hand, and at
+least two are real (one over-claims what is trained end-to-end, one invents the abbreviation
+"ARC-C"), while a few look like a strict judge. The first version of this check scored 17 of
+23 and was wrong: the judge was shown bare excerpts that never name their paper, so "HyDE used
+Pyserini" looked unsupported by a HyDE excerpt. The excerpts now carry their document name.
+This is the same lesson as the title prefix on embedded chunks.
 
 The baseline's 45 incorrect answers are mostly retrieval failures: recall@5 was 0.69, and when the
 gold page is not retrieved the model correctly says "I do not know", which the judge marks

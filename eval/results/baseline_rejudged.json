@@ -1,0 +1,3036 @@
+{
+ "summary": {
+  "label": "baseline_rejudged",
+  "mode": "dense",
+  "chunk_words": 220,
+  "chunk_overlap": 40,
+  "questions": 100,
+  "recall@5": 0.69,
+  "recall@1": 0.38,
+  "mrr": 0.501,
+  "retrieve_ms_p50": 7.9,
+  "min_score": 0.55,
+  "out_of_scope_refused": 0.3,
+  "answerable_wrongly_refused": 0.0,
+  "correct": 0.53,
+  "partial": 0.0,
+  "incorrect": 0.47,
+  "answer_model": "openai/gpt-oss-120b",
+  "judge_model": "openai/gpt-oss-20b",
+  "judge_prompt": "v2"
+ },
+ "out_of_scope_confidence": [
+  0.5165861877387873,
+  0.5804041808979703,
+  0.560364509868569,
+  0.4953453729377797,
+  0.5778503360291711,
+  0.6448331841572992,
+  0.5598521606200559,
+  0.5166804982764135,
+  0.7436256133777622,
+  0.7250219965733203
+ ],
+ "rows": [
+  {
+   "id": "att-01",
+   "rank": 1,
+   "confidence": 0.8,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     1
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     10
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     9
+    ]
+   ],
+   "answer": "The Transformer achieved a BLEU score of\u202f28.4 on the WMT\u202f2014 English\u2011to\u2011German translation task\u30101\u2020L1-L4\u3011\u30102\u2020L1-L4\u3011",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "att-02",
+   "rank": 1,
+   "confidence": 0.736,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     1
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     9
+    ]
+   ],
+   "answer": "The big Transformer model attained a BLEU score of about\u202f41\u202fon the WMT\u202f2014 English\u2011to\u2011French test, and it was trained for roughly\u202f3.5\u202fdays on eight P100 GPUs\u30101\u2020L1-L4\u3011. (A later statement notes a BLEU of\u202f41.8\u202fafter the same 3.5\u2011day training period\u30103\u2020L1-L3\u3011.)",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "att-03",
+   "rank": 1,
+   "confidence": 0.853,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     5
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     2
+    ]
+   ],
+   "answer": "The Transformer encoder stack is composed of\u202fN\u202f=\u202f6 identical layers\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "att-04",
+   "rank": 1,
+   "confidence": 0.773,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     5
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     9
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     2
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     2
+    ]
+   ],
+   "answer": "The Transformer uses eight parallel attention heads, and each head has a dimensionality of 64 (since\u202fdk\u202f=\u202fdv\u202f=\u202fdmodel\u202f/\u202fh\u202f=\u202f64)\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "att-05",
+   "rank": 1,
+   "confidence": 0.787,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     7
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "bert.pdf",
+     13
+    ],
+    [
+     "self_rag.pdf",
+     19
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ]
+   ],
+   "answer": "The Transformer learning\u2011rate schedule used 4,000 warm\u2011up steps\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "att-06",
+   "rank": null,
+   "confidence": 0.753,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     1
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     2
+    ]
+   ],
+   "answer": "The Transformer models were trained on eight GPUs, specifically eight\u202fP100 GPUs\u202f[4][5].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "att-07",
+   "rank": 1,
+   "confidence": 0.738,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     7
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     9
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     1
+    ]
+   ],
+   "answer": "The base Transformer models were trained for\u202f100,000\u202fsteps, which took about\u202f12\u202fhours\u202f[1].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "att-08",
+   "rank": 1,
+   "confidence": 0.746,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     9
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ]
+   ],
+   "answer": "The authors applied label smoothing with a value of\u202f\u03f5\u2097\u209b\u202f=\u202f0.1\u202f[1][2]. They note that this hurts perplexity because the model becomes more uncertain, but it improves accuracy and the BLEU score\u202f[1][2].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "att-09",
+   "rank": 1,
+   "confidence": 0.765,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     9
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     1
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     2
+    ]
+   ],
+   "answer": "The Transformer encodes positions with sinusoidal functions: each dimension uses a sine or cosine of the form\u202fPE(pos,\u202f2i)\u202f=\u202fsin(pos\u202f/\u202f10000^{2i/d_model}) and\u202fPE(pos,\u202f2i+1)\u202f=\u202fcos(pos\u202f/\u202f10000^{2i/d_model})\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "att-10",
+   "rank": 2,
+   "confidence": 0.811,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     7
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     7
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     2
+    ]
+   ],
+   "answer": "Self\u2011attention layers have a per\u2011layer computational cost of\u202f\\(O(n^{2}\\,d)\\), whereas a recurrent layer costs\u202f\\(O(n\\,d^{2})\\) per layer\u202f[3].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "bert-01",
+   "rank": 1,
+   "confidence": 0.822,
+   "retrieved": [
+    [
+     "bert.pdf",
+     8
+    ],
+    [
+     "bert.pdf",
+     6
+    ],
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     14
+    ],
+    [
+     "bert.pdf",
+     3
+    ]
+   ],
+   "answer": "BERTBASE has about\u202f110\u202fmillion parameters, while BERTLARGE has about\u202f340\u202fmillion parameters\u30105\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "bert-02",
+   "rank": 2,
+   "confidence": 0.853,
+   "retrieved": [
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     13
+    ],
+    [
+     "bert.pdf",
+     14
+    ],
+    [
+     "bert.pdf",
+     5
+    ],
+    [
+     "bert.pdf",
+     12
+    ]
+   ],
+   "answer": "BERT masks\u202f15\u202fpercent of the WordPiece tokens in each input sequence during pre\u2011training\u202f[2].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "bert-03",
+   "rank": 2,
+   "confidence": 0.836,
+   "retrieved": [
+    [
+     "bert.pdf",
+     16
+    ],
+    [
+     "bert.pdf",
+     12
+    ],
+    [
+     "bert.pdf",
+     4
+    ],
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     16
+    ]
+   ],
+   "answer": "When a token is selected for masked\u2011language\u2011model prediction, BERT replaces it with the\u202f[MASK]\u202fsymbol 80\u202f% of the time, substitutes a random token 10\u202f% of the time, and leaves the original token unchanged 10\u202f% of the time\u30103\u2020L9-L13\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "bert-04",
+   "rank": 1,
+   "confidence": 0.68,
+   "retrieved": [
+    [
+     "bert.pdf",
+     6
+    ],
+    [
+     "bert.pdf",
+     6
+    ],
+    [
+     "rag.pdf",
+     15
+    ],
+    [
+     "bert.pdf",
+     5
+    ],
+    [
+     "bert.pdf",
+     14
+    ]
+   ],
+   "answer": "BERT\u202fLARGE achieved a GLUE benchmark score of\u202f80.5\u202fon the official leaderboard\u30102\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "bert-05",
+   "rank": 1,
+   "confidence": 0.786,
+   "retrieved": [
+    [
+     "bert.pdf",
+     7
+    ],
+    [
+     "bert.pdf",
+     9
+    ],
+    [
+     "bert.pdf",
+     7
+    ],
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     7
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "bert-06",
+   "rank": 1,
+   "confidence": 0.794,
+   "retrieved": [
+    [
+     "bert.pdf",
+     7
+    ],
+    [
+     "bert.pdf",
+     9
+    ],
+    [
+     "bert.pdf",
+     7
+    ],
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     6
+    ]
+   ],
+   "answer": "BERTLARGE achieved a Test F1 of\u202f83.1 on SQuAD\u202fv2.0\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "bert-07",
+   "rank": 2,
+   "confidence": 0.8,
+   "retrieved": [
+    [
+     "bert.pdf",
+     1
+    ],
+    [
+     "bert.pdf",
+     14
+    ],
+    [
+     "bert.pdf",
+     5
+    ],
+    [
+     "bert.pdf",
+     9
+    ],
+    [
+     "bert.pdf",
+     9
+    ]
+   ],
+   "answer": "BERT was pre\u2011trained on two text corpora: the BooksCorpus, which contains about\u202f800\u202fmillion words, and the English Wikipedia, which provides roughly\u202f2,500\u202fmillion words\u30103\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "bert-08",
+   "rank": 5,
+   "confidence": 0.817,
+   "retrieved": [
+    [
+     "bert.pdf",
+     5
+    ],
+    [
+     "bert.pdf",
+     14
+    ],
+    [
+     "bert.pdf",
+     15
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ],
+    [
+     "bert.pdf",
+     4
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "bert-09",
+   "rank": null,
+   "confidence": 0.751,
+   "retrieved": [
+    [
+     "bert.pdf",
+     14
+    ],
+    [
+     "bert.pdf",
+     9
+    ],
+    [
+     "bert.pdf",
+     8
+    ],
+    [
+     "bert.pdf",
+     5
+    ],
+    [
+     "bert.pdf",
+     15
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "bert-10",
+   "rank": 1,
+   "confidence": 0.82,
+   "retrieved": [
+    [
+     "bert.pdf",
+     13
+    ],
+    [
+     "bert.pdf",
+     14
+    ],
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     8
+    ]
+   ],
+   "answer": "BERT was pre\u2011trained for\u202f1\u202fmillion steps using a batch size of\u202f128\u202f000 words per step\u30102\u3011.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "sbert-01",
+   "rank": 1,
+   "confidence": 0.881,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     2
+    ],
+    [
+     "sentence_bert.pdf",
+     2
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ]
+   ],
+   "answer": "Finding the most similar pair among 10\u202f000 sentences takes about\u202f65\u202fhours with BERT, while SBERT reduces this to roughly\u202f5\u202fseconds\u202f[1][3].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "sbert-02",
+   "rank": 1,
+   "confidence": 0.911,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     1
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ],
+    [
+     "sentence_bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     4
+    ],
+    [
+     "sentence_bert.pdf",
+     2
+    ]
+   ],
+   "answer": "Sentence\u2011BERT derives its sentence embeddings with\u202fsiamese\u202fand\u202ftriplet\u202fnetwork structures\u202f[1][3].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "sbert-03",
+   "rank": 1,
+   "confidence": 0.865,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     14
+    ],
+    [
+     "bert.pdf",
+     15
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ]
+   ],
+   "answer": "Sentence\u2011BERT experiments with three pooling strategies: using the output of the\u202f[CLS]\u202ftoken, computing the mean of all output vectors (the\u202fMEAN\u202fstrategy), and computing a max\u2011over\u2011time of the output vectors (the\u202fMAX\u202fstrategy)\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "sbert-04",
+   "rank": null,
+   "confidence": 0.727,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     6
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "self_rag.pdf",
+     7
+    ]
+   ],
+   "answer": "The default pooling strategy used in SBERT is\u202fMEAN\u202fpooling\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "sbert-05",
+   "rank": 1,
+   "confidence": 0.787,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     4
+    ],
+    [
+     "rag.pdf",
+     15
+    ],
+    [
+     "beir.pdf",
+     15
+    ],
+    [
+     "sentence_bert.pdf",
+     3
+    ],
+    [
+     "sentence_bert.pdf",
+     2
+    ]
+   ],
+   "answer": "The SNLI dataset contains 570\u202f000 sentence pairs, and the MultiNLI dataset contains 430\u202f000 sentence pairs\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "sbert-06",
+   "rank": null,
+   "confidence": 0.819,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     5
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "sbert-07",
+   "rank": 1,
+   "confidence": 0.732,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     3
+    ],
+    [
+     "sentence_bert.pdf",
+     6
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ]
+   ],
+   "answer": "SBERT\u2019s triplet objective uses Euclidean distance as the metric and sets the margin\u202f\u03b5\u202fto\u202f1\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "sbert-08",
+   "rank": 2,
+   "confidence": 0.74,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     6
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ]
+   ],
+   "answer": "SBERT uses a \u201csmart batching\u201d strategy that groups together sentences of similar length so that each mini\u2011batch is padded only to the longest sentence in that batch, dramatically reducing the computational overhead from padding tokens\u30104\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "sbert-09",
+   "rank": null,
+   "confidence": 0.779,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "sentence_bert.pdf",
+     6
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "sbert-10",
+   "rank": 2,
+   "confidence": 0.848,
+   "retrieved": [
+    [
+     "bert.pdf",
+     15
+    ],
+    [
+     "sentence_bert.pdf",
+     2
+    ],
+    [
+     "sentence_bert.pdf",
+     5
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ]
+   ],
+   "answer": "The Sentence\u2011BERT paper evaluates argument similarity on the Argument Facet Similarity (AFS) corpus\u202f[3].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "dpr-01",
+   "rank": null,
+   "confidence": 0.85,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     6
+    ],
+    [
+     "rag.pdf",
+     7
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     12
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ]
+   ],
+   "answer": "The Dense Passage Retriever achieves about\u202f19.3\u202fpercentage\u2011points higher top\u201120 accuracy than BM25 (78.4\u202f% vs.\u202f59.1\u202f%)\u30104\u2020L1-L3\u3011.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "PARTIAL"
+  },
+  {
+   "id": "dpr-02",
+   "rank": 4,
+   "confidence": 0.769,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     2
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     7
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     2
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     4
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     8
+    ]
+   ],
+   "answer": "DPR retrieves passages that are about\u202f100\u202ftokens long, and it indexes roughly\u202f21\u202fmillion passages in total\u202f[3][2].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "dpr-03",
+   "rank": null,
+   "confidence": 0.671,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     20
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     19
+    ],
+    [
+     "beir.pdf",
+     6
+    ],
+    [
+     "beir.pdf",
+     2
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "dpr-04",
+   "rank": 1,
+   "confidence": 0.812,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     3
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     12
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     7
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     10
+    ],
+    [
+     "beir.pdf",
+     12
+    ]
+   ],
+   "answer": "DPR measures similarity by taking the inner\u2011product (dot product) of the question\u2019s encoded vector and the passage\u2019s encoded vector:\u202fsim(q,\u202fp)\u202f=\u202fEQ(q)\u1d40\u202fEP(p)\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "dpr-05",
+   "rank": null,
+   "confidence": 0.759,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     5
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     9
+    ],
+    [
+     "beir.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "dpr-06",
+   "rank": 3,
+   "confidence": 0.761,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     7
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     9
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "dpr-07",
+   "rank": 1,
+   "confidence": 0.804,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     1
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     9
+    ]
+   ],
+   "answer": "DPR begins to outperform BM25 after being trained on just\u202f1,000\u202fexamples\u30102\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "dpr-08",
+   "rank": 1,
+   "confidence": 0.739,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     7
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     8
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     9
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     12
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ]
+   ],
+   "answer": "DPR can process about\u202f995\u202fquestions per second at run time\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "dpr-09",
+   "rank": 2,
+   "confidence": 0.802,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     7
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     3
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     9
+    ],
+    [
+     "bert.pdf",
+     13
+    ]
+   ],
+   "answer": "Computing dense embeddings for the 21\u202fmillion passages takes about\u202f8.8\u202fhours when using eight GPUs\u30102\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "dpr-10",
+   "rank": 1,
+   "confidence": 0.797,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     8
+    ],
+    [
+     "beir.pdf",
+     7
+    ]
+   ],
+   "answer": "BM25 outperforms DPR on SQuAD because the SQuAD questions were written after the annotators saw the passage, creating a high lexical overlap between questions and passages that gives BM25 a clear advantage, and because the SQuAD data comes from only about 500\u202f+ Wikipedia articles, making the training distribution extremely biased\u30102\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "colbert-01",
+   "rank": null,
+   "confidence": 0.893,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     8
+    ],
+    [
+     "colbert.pdf",
+     7
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     7
+    ]
+   ],
+   "answer": "ColBERT is reported to be more than\u202f170\u202ftimes faster than existing BERT\u2011based ranking models, and it needs roughly\u202f14,000\u202ftimes fewer FLOPs per query (about\u202f13,900\u201314,000\u00d7 fewer)\u30104\u3011\u30102\u3011.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "colbert-02",
+   "rank": 5,
+   "confidence": 0.878,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     7
+    ],
+    [
+     "colbert.pdf",
+     8
+    ],
+    [
+     "colbert.pdf",
+     7
+    ],
+    [
+     "colbert.pdf",
+     3
+    ],
+    [
+     "colbert.pdf",
+     9
+    ]
+   ],
+   "answer": "When used for re\u2011ranking, ColBERT runs orders of magnitude faster than other BERT\u2011based rankers: its latency is roughly\u202f170\u202ftimes lower and it requires about\u202f13,900\u202ftimes fewer FLOPs per query than a comparable BERT\u2011base model\u202f[1].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "colbert-03",
+   "rank": 3,
+   "confidence": 0.792,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     5
+    ],
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "colbert.pdf",
+     2
+    ],
+    [
+     "colbert.pdf",
+     9
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "colbert-04",
+   "rank": 3,
+   "confidence": 0.778,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     5
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     8
+    ],
+    [
+     "colbert.pdf",
+     2
+    ]
+   ],
+   "answer": "ColBERT typically uses a reduced embedding dimension\u202fm that is much smaller than BERT\u2019s hidden size; in the experiments reported, the default setting is\u202fm\u202f=\u202f128\u202fdimensions\u30103\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "colbert-05",
+   "rank": 3,
+   "confidence": 0.694,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     20
+    ]
+   ],
+   "answer": "ColBERT prepends BERT\u2019s start token\u202f[CLS] and then a task\u2011specific token \u2013\u202f[Q] for a query and\u202f[D] for a document\u202f[3].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "colbert-06",
+   "rank": 1,
+   "confidence": 0.78,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     5
+    ],
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     9
+    ]
+   ],
+   "answer": "The document encoder removes (filters out) the embeddings that correspond to punctuation symbols\u202f\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "colbert-07",
+   "rank": 3,
+   "confidence": 0.802,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     2
+    ],
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     1
+    ],
+    [
+     "colbert.pdf",
+     9
+    ]
+   ],
+   "answer": "Query augmentation in ColBERT is a soft, differentiable mechanism that learns to expand a query with additional terms or to re\u2011weight its existing terms based on their importance for matching the query\u202f[3].",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "colbert-08",
+   "rank": 1,
+   "confidence": 0.844,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     3
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     9
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "colbert-09",
+   "rank": null,
+   "confidence": 0.708,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "colbert.pdf",
+     8
+    ],
+    [
+     "beir.pdf",
+     6
+    ]
+   ],
+   "answer": "ColBERT can index the MS\u202fMARCO collection in about three hours\u30101\u2020L4-L7\u3011\u30102\u2020L4-L7\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "colbert-10",
+   "rank": 1,
+   "confidence": 0.795,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "colbert.pdf",
+     1
+    ],
+    [
+     "colbert.pdf",
+     3
+    ],
+    [
+     "colbert.pdf",
+     1
+    ],
+    [
+     "colbert.pdf",
+     9
+    ]
+   ],
+   "answer": "ColBERT is evaluated on two recent passage\u2011search collections: the MS\u202fMARCO passage ranking dataset and the TREC Complex Answer Retrieval (TREC\u2011CAR) dataset\u30101\u2020L4-L7\u3011\u30102\u2020L1-L4\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "rag-01",
+   "rank": 2,
+   "confidence": 0.774,
+   "retrieved": [
+    [
+     "rag.pdf",
+     6
+    ],
+    [
+     "rag.pdf",
+     3
+    ],
+    [
+     "rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     17
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ]
+   ],
+   "answer": "RAG\u2011Sequence treats the retrieved passage as a single latent variable and uses the same document to generate every token of the output sequence, marginalizing over the top\u2011K documents only once per answer\u202f[3].  \nRAG\u2011Token, in contrast, allows a different retrieved document to be drawn for each target token, marginalizing separately for each token so the generator can draw content from multiple documents when producing an answer\u202f[2][3].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "rag-02",
+   "rank": 5,
+   "confidence": 0.752,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     18
+    ],
+    [
+     "rag.pdf",
+     2
+    ],
+    [
+     "rag.pdf",
+     17
+    ],
+    [
+     "self_rag.pdf",
+     4
+    ],
+    [
+     "rag.pdf",
+     3
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "rag-03",
+   "rank": 2,
+   "confidence": 0.834,
+   "retrieved": [
+    [
+     "rag.pdf",
+     2
+    ],
+    [
+     "rag.pdf",
+     4
+    ],
+    [
+     "beir.pdf",
+     19
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "rag.pdf",
+     7
+    ]
+   ],
+   "answer": "RAG\u2019s non\u2011parametric memory is built from a Wikipedia dump in which each article is divided into disjoint 100\u2011word chunks, producing about\u202f21\u202fmillion separate documents\u202f[2].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "rag-04",
+   "rank": null,
+   "confidence": 0.815,
+   "retrieved": [
+    [
+     "rag.pdf",
+     7
+    ],
+    [
+     "rag.pdf",
+     7
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "rag.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     1
+    ]
+   ],
+   "answer": "RAG builds a non\u2011parametric memory index of Wikipedia passages (e.g., using the DrQA Wikipedia dump) that can be swapped at test time for fast retrieval\u202f[1].",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "rag-05",
+   "rank": null,
+   "confidence": 0.7,
+   "retrieved": [
+    [
+     "rag.pdf",
+     17
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     16
+    ],
+    [
+     "self_rag.pdf",
+     18
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "rag-06",
+   "rank": 1,
+   "confidence": 0.865,
+   "retrieved": [
+    [
+     "rag.pdf",
+     6
+    ],
+    [
+     "rag.pdf",
+     8
+    ],
+    [
+     "rag.pdf",
+     5
+    ],
+    [
+     "rag.pdf",
+     5
+    ],
+    [
+     "rag.pdf",
+     17
+    ]
+   ],
+   "answer": "RAG was judged to be more factual than BART in\u202f42.7\u202f% of the human evaluation cases for Jeopardy question generation\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "rag-07",
+   "rank": 1,
+   "confidence": 0.717,
+   "retrieved": [
+    [
+     "rag.pdf",
+     8
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "rag.pdf",
+     7
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ]
+   ],
+   "answer": "The authors showed that they could \u201chot\u2011swap\u201d RAG\u2019s knowledge index by simply replacing its non\u2011parametric memory: using the 2016 index with 2016 world\u2011leader data gave 70\u202f% accuracy (and 68\u202f% with the 2018 index on 2018 leaders), while mismatching indices caused accuracy to drop dramatically (to 12\u202f% and 4\u202f%)\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "PARTIAL"
+  },
+  {
+   "id": "rag-08",
+   "rank": null,
+   "confidence": 0.793,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "colbert.pdf",
+     5
+    ],
+    [
+     "rag.pdf",
+     8
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "rag-09",
+   "rank": 1,
+   "confidence": 0.812,
+   "retrieved": [
+    [
+     "rag.pdf",
+     4
+    ],
+    [
+     "rag.pdf",
+     4
+    ],
+    [
+     "rag.pdf",
+     17
+    ],
+    [
+     "rag.pdf",
+     3
+    ],
+    [
+     "rag.pdf",
+     7
+    ]
+   ],
+   "answer": "Thorough Decoding is a decoding procedure for RAG\u2011Sequence in which, after generating a candidate set\u202fY\u202fof hypotheses, an additional forward pass is run for each document\u202fz\u202fthat did not produce a given hypothesis\u202fy\u202fin its beam; the generator probability for\u202fy\u202fis multiplied by the retrieval probability\u202fp\u03b7(z|x)\u202fand these products are summed across all documents to obtain the marginal probability of\u202fy\u202f[1][2].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "rag-10",
+   "rank": null,
+   "confidence": 0.779,
+   "retrieved": [
+    [
+     "rag.pdf",
+     18
+    ],
+    [
+     "rag.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     20
+    ],
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "rag.pdf",
+     8
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "beir-01",
+   "rank": 2,
+   "confidence": 0.891,
+   "retrieved": [
+    [
+     "beir.pdf",
+     4
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     17
+    ],
+    [
+     "beir.pdf",
+     3
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "beir-02",
+   "rank": 2,
+   "confidence": 0.843,
+   "retrieved": [
+    [
+     "beir.pdf",
+     19
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     17
+    ],
+    [
+     "beir.pdf",
+     4
+    ],
+    [
+     "beir.pdf",
+     3
+    ]
+   ],
+   "answer": "BEIR includes 19 different retrieval tasks, as indicated by the 19 datasets it comprises\u30104\u3011.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "beir-03",
+   "rank": 1,
+   "confidence": 0.825,
+   "retrieved": [
+    [
+     "beir.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     4
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     4
+    ],
+    [
+     "beir.pdf",
+     17
+    ]
+   ],
+   "answer": "BEIR reports Normalised Cumulative Discount Gain (nDCG@k) as the evaluation metric for all datasets\u202f[1].",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "beir-04",
+   "rank": 5,
+   "confidence": 0.785,
+   "retrieved": [
+    [
+     "beir.pdf",
+     7
+    ],
+    [
+     "beir.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "beir.pdf",
+     17
+    ],
+    [
+     "beir.pdf",
+     2
+    ]
+   ],
+   "answer": "The BEIR benchmark finds that BM25 remains a strong baseline: many models that beat BM25 on in\u2011domain data fail to generalize and under\u2011perform BM25 on the zero\u2011shot BEIR datasets, while approaches that consistently outperform BM25 (e.g., cross\u2011attentional re\u2011ranking, ColBERT, docT5query) are highlighted as generally robust across tasks\u30103\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "beir-05",
+   "rank": 1,
+   "confidence": 0.762,
+   "retrieved": [
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "beir.pdf",
+     1
+    ],
+    [
+     "beir.pdf",
+     5
+    ]
+   ],
+   "answer": "Re\u2011ranking and late\u2011interaction architectures obtain the highest zero\u2011shot performance on the BEIR benchmark, but they incur high computational costs\u30104\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "beir-06",
+   "rank": 2,
+   "confidence": 0.765,
+   "retrieved": [
+    [
+     "beir.pdf",
+     7
+    ],
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     7
+    ],
+    [
+     "beir.pdf",
+     9
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "beir-07",
+   "rank": 2,
+   "confidence": 0.878,
+   "retrieved": [
+    [
+     "beir.pdf",
+     1
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     3
+    ],
+    [
+     "beir.pdf",
+     6
+    ]
+   ],
+   "answer": "No. BEIR finds that in\u2011domain performance is not a good indicator of out\u2011of\u2011domain generalisation for retrieval models\u30105\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "beir-08",
+   "rank": null,
+   "confidence": 0.709,
+   "retrieved": [
+    [
+     "beir.pdf",
+     7
+    ],
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "beir.pdf",
+     19
+    ],
+    [
+     "beir.pdf",
+     21
+    ],
+    [
+     "beir.pdf",
+     9
+    ]
+   ],
+   "answer": "TAS\u2011B is a dense\u2011retrieval model evaluated in the BEIR benchmark that achieves the strongest zero\u2011shot generalization among dense approaches, outperforming ANCE and DPR on most datasets. Its superior performance is attributed to a strong training setup that combines in\u2011domain batch negatives with a Margin\u2011MSE loss (and knowledge\u2011distillation teachers), which also leads the model to prefer retrieving shorter documents (e.g., median length\u202f\u2248\u202f10\u202fwords on TREC\u2011COVID versus 160\u202fwords for ANCE)\u30101\u2020L1-L7\u3011\u30104\u2020L1-L5\u3011",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "beir-09",
+   "rank": null,
+   "confidence": 0.681,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     8
+    ],
+    [
+     "colbert.pdf",
+     8
+    ],
+    [
+     "self_rag.pdf",
+     20
+    ],
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "colbert.pdf",
+     8
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "beir-10",
+   "rank": 4,
+   "confidence": 0.794,
+   "retrieved": [
+    [
+     "beir.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     4
+    ],
+    [
+     "beir.pdf",
+     17
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     9
+    ]
+   ],
+   "answer": "The authors observe that the annotation pools for the BEIR datasets are biased toward lexical approaches, which can affect the evaluation of non\u2011lexical retrieval methods\u30105\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "hyde-01",
+   "rank": 4,
+   "confidence": 0.735,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     7
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     5
+    ],
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     5
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "hyde-02",
+   "rank": 5,
+   "confidence": 0.793,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     7
+    ],
+    [
+     "hyde.pdf",
+     4
+    ]
+   ],
+   "answer": "HyDE is implemented by pairing a contrastive encoder with an instruction\u2011following language model, specifically using InstructGPT as its generative LLM backbone\u30101\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "hyde-03",
+   "rank": 1,
+   "confidence": 0.808,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     3
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     3
+    ]
+   ],
+   "answer": "HyDE uses an\u202funsupervised contrastive encoder\u202fto map the generated \u201chypothetical\u201d document into an embedding vector\u202f[1][3].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "hyde-04",
+   "rank": null,
+   "confidence": 0.662,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     5
+    ],
+    [
+     "hyde.pdf",
+     7
+    ],
+    [
+     "self_rag.pdf",
+     17
+    ],
+    [
+     "rag.pdf",
+     18
+    ],
+    [
+     "hyde.pdf",
+     5
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "hyde-05",
+   "rank": 1,
+   "confidence": 0.687,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     4
+    ],
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     5
+    ]
+   ],
+   "answer": "HyDE is evaluated on four non\u2011English languages: Swahili, Korean, Japanese, and Bengali\u30103\u2020L1-L4\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "hyde-06",
+   "rank": null,
+   "confidence": 0.76,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     7
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     19
+    ],
+    [
+     "hyde.pdf",
+     2
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "hyde-07",
+   "rank": null,
+   "confidence": 0.676,
+   "retrieved": [
+    [
+     "beir.pdf",
+     19
+    ],
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "self_rag.pdf",
+     11
+    ],
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "ragas.pdf",
+     3
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "hyde-08",
+   "rank": null,
+   "confidence": 0.74,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     7
+    ],
+    [
+     "hyde.pdf",
+     5
+    ],
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     1
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "hyde-09",
+   "rank": 2,
+   "confidence": 0.772,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     7
+    ],
+    [
+     "self_rag.pdf",
+     7
+    ]
+   ],
+   "answer": "HyDE was also evaluated with a 52\u2011billion\u2011parameter Cohere model (command\u2011xlarge\u201120221108), an 11\u2011billion\u2011parameter FLAN\u2011T5 model (FLAN\u2011T5\u2011xxl), and a 175\u2011billion\u2011parameter GPT model\u202f[2].",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "hyde-10",
+   "rank": 1,
+   "confidence": 0.845,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     4
+    ],
+    [
+     "hyde.pdf",
+     7
+    ],
+    [
+     "hyde.pdf",
+     1
+    ],
+    [
+     "hyde.pdf",
+     4
+    ]
+   ],
+   "answer": "HyDE uses the multilingual\u202fmContriever encoder for non\u2011English retrieval tasks\u30105\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "ragas-01",
+   "rank": 1,
+   "confidence": 0.753,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "ragas.pdf",
+     2
+    ]
+   ],
+   "answer": "RAGAs measures three quality aspects:\u202ffaithfulness (the answer is grounded in the retrieved context), answer relevance (the answer addresses the question), and context relevance (the retrieved context is sufficiently focused)\u202f[3].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "ragas-02",
+   "rank": null,
+   "confidence": 0.765,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "ragas.pdf",
+     2
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "ragas-03",
+   "rank": null,
+   "confidence": 0.864,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "rag.pdf",
+     4
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "rag.pdf",
+     5
+    ],
+    [
+     "rag.pdf",
+     17
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "ragas-04",
+   "rank": null,
+   "confidence": 0.764,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ]
+   ],
+   "answer": "RAGAs computes a faithfulness score by prompting a language model (e.g., ChatGPT) to assign a numeric rating from\u202f0\u202fto\u202f10 that reflects how well the answer\u2019s information is consistent with the provided context\u2014penalizing any claims that cannot be deduced from that context\u30104\u3011. The model\u2019s rating is then used as the faithfulness metric for the answer\u30105\u3011.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "ragas-05",
+   "rank": 2,
+   "confidence": 0.879,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     3
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     2
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "ragas-06",
+   "rank": 2,
+   "confidence": 0.809,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     4
+    ],
+    [
+     "ragas.pdf",
+     4
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "self_rag.pdf",
+     18
+    ]
+   ],
+   "answer": "The WikiEval dataset was built by first picking 50 Wikipedia pages about events that occurred since the start of 2022, giving preference to pages that had recent edits. For each page, the authors asked ChatGPT to generate a question that could be fully answered from the page\u2019s introductory section, using a prompt that required the question to be non\u2011trivial, moderately difficult, and answerable from the context. They then had ChatGPT answer each generated question using the same introductory text, and finally two fluent English annotators labeled every question\u2011context\u2011answer triple along the three quality dimensions of faithfulness, answer relevance, and context relevance\u30102\u2020L1-L9\u3011\u30102\u2020L10-L13\u3011.",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "ragas-07",
+   "rank": null,
+   "confidence": 0.764,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "rag.pdf",
+     5
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "ragas-08",
+   "rank": 1,
+   "confidence": 0.803,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ]
+   ],
+   "answer": "RAGAs achieves a\u202f0.95\u202faccuracy agreement with human annotators on faithfulness\u202f[1].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "ragas-09",
+   "rank": 1,
+   "confidence": 0.72,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "rag.pdf",
+     8
+    ],
+    [
+     "rag.pdf",
+     5
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "ragas-10",
+   "rank": 3,
+   "confidence": 0.815,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     4
+    ],
+    [
+     "rag.pdf",
+     17
+    ],
+    [
+     "ragas.pdf",
+     4
+    ]
+   ],
+   "answer": "Two annotators judged the WikiEval questions\u202f[3].",
+   "verdict": "CORRECT",
+   "verdict_judge_v1": "CORRECT"
+  },
+  {
+   "id": "selfrag-01",
+   "rank": 3,
+   "confidence": 0.825,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "self_rag.pdf",
+     17
+    ],
+    [
+     "self_rag.pdf",
+     4
+    ],
+    [
+     "self_rag.pdf",
+     4
+    ],
+    [
+     "self_rag.pdf",
+     16
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "selfrag-02",
+   "rank": 1,
+   "confidence": 0.855,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     4
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     1
+    ]
+   ],
+   "answer": "The critic\u2019s training data is collected by manually annotating reflection tokens for each segment, a process that is costly, and the authors also use a state\u2011of\u2011the\u2011art LLM such as GPT\u20114 to generate these annotations more efficiently\u30101\u3011.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "selfrag-03",
+   "rank": null,
+   "confidence": 0.812,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     1
+    ],
+    [
+     "self_rag.pdf",
+     4
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "rag.pdf",
+     2
+    ]
+   ],
+   "answer": "SELF\u2011RAG trains a single arbitrary language model and the experiments use models of roughly 7\u202fbillion and 13\u202fbillion parameters as the generator\u202f[2].",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "selfrag-04",
+   "rank": null,
+   "confidence": 0.723,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     9
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "rag.pdf",
+     5
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     2
+    ]
+   ],
+   "answer": "SELF\u2011RAG\u2019s default retriever is initialized from the DPR (Dense Passage Retrieval) retriever\u202f[3][4].",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "selfrag-05",
+   "rank": null,
+   "confidence": 0.783,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     18
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ],
+    [
+     "rag.pdf",
+     17
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ]
+   ],
+   "answer": "Self\u2011RAG was trained on a total of\u202f145,619\u202finstruction\u2011output pairs, obtained by aggregating the instances from all listed datasets (GPT\u20114, Stanford Alpaca, FLAN\u2011V2, ShareGPT, Open Assistant\u202f1, Wizard of Wikipedia, Natural Questions, FEVER, OpenBookQA, Arc\u2011Easy, and ASQA)\u30101\u3011.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "selfrag-06",
+   "rank": null,
+   "confidence": 0.727,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     2
+    ],
+    [
+     "self_rag.pdf",
+     8
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "selfrag-07",
+   "rank": null,
+   "confidence": 0.852,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     1
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     4
+    ]
+   ],
+   "answer": "I do not know. The documents I have do not contain an answer to this.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "selfrag-08",
+   "rank": null,
+   "confidence": 0.746,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "rag.pdf",
+     17
+    ],
+    [
+     "self_rag.pdf",
+     18
+    ],
+    [
+     "self_rag.pdf",
+     4
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ]
+   ],
+   "answer": "The Self\u2011RAG models were trained on eight 32\u202fGB NVIDIA V100 GPUs\u30102\u3011.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "selfrag-09",
+   "rank": null,
+   "confidence": 0.79,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "self_rag.pdf",
+     1
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "self_rag.pdf",
+     2
+    ],
+    [
+     "ragas.pdf",
+     1
+    ]
+   ],
+   "answer": "Self\u2011RAG evaluates biography generation using the \u201cS&P\u201d metric, which measures whether the model\u2019s output is plausible (a reasonable, on\u2011topic response) and supported (the evidence provided is sufficient to verify the answer)\u30103\u3011.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  },
+  {
+   "id": "selfrag-10",
+   "rank": 1,
+   "confidence": 0.781,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "self_rag.pdf",
+     16
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ]
+   ],
+   "answer": "Self\u2011RAG is evaluated on two closed\u2011set tasks: a public\u2011health fact\u2011verification dataset (PubHealth) and a multiple\u2011choice scientific\u2011exam reasoning dataset (ARC\u20116)\u30101\u3011.",
+   "verdict": "INCORRECT",
+   "verdict_judge_v1": "INCORRECT"
+  }
+ ]
+}

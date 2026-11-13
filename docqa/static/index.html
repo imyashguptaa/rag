@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Document Q&amp;A</title>
+<style>
+  :root {
+    --bg: #f7f5f0; --surface: #ffffff; --sunken: #efece5; --line: #dedad0;
+    --ink: #1d1b17; --muted: #6a665d; --accent: #0e5a4c; --accent-ink: #ffffff;
+    --accent-soft: #dcebe6; --warn-bg: #fbf1dc; --warn-ink: #6b4a05; --danger: #a32020;
+    --shadow: 0 1px 2px rgba(29, 27, 23, .06), 0 4px 16px rgba(29, 27, 23, .05);
+    --ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --read: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151412; --surface: #1e1c19; --sunken: #262320; --line: #36322c;
+      --ink: #ece8df; --muted: #a39d90; --accent: #7fd1bd; --accent-ink: #0c2a24;
+      --accent-soft: #1f3a34; --warn-bg: #3a2f14; --warn-ink: #f0d591; --danger: #f08a8a;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--ui); display: flex; flex-direction: column; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* Top bar */
+  .top { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid var(--line); background: var(--surface); }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 650; letter-spacing: -.01em; }
+  .mark { width: 22px; height: 26px; border-radius: 3px 8px 3px 3px; background: var(--accent); position: relative; flex: none; }
+  .mark::before, .mark::after { content: ""; position: absolute; left: 5px; right: 5px; height: 2px; background: var(--accent-ink); opacity: .85; border-radius: 1px; }
+  .mark::before { top: 9px; } .mark::after { top: 14px; right: 9px; }
+  .status { margin-left: auto; color: var(--muted); font-size: 13px; white-space: nowrap; }
+  .btn { border: 1px solid var(--line); background: var(--surface); padding: 6px 12px; border-radius: 8px; font-size: 14px; white-space: nowrap; }
+  .btn:hover { background: var(--sunken); }
+
+  /* Conversation */
+  #scroll { flex: 1; overflow-y: auto; }
+  #thread { max-width: 760px; margin: 0 auto; padding: 28px 20px 24px; display: flex; flex-direction: column; gap: 22px; }
+  .empty { margin-top: 6vh; }
+  .empty h1 { font: 600 30px/1.2 var(--read); margin: 0 0 8px; letter-spacing: -.01em; text-wrap: balance; }
+  .empty p { color: var(--muted); margin: 0 0 22px; max-width: 56ch; }
+  .label { font-size: 12px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin: 0 0 8px; }
+  .chips { display: flex; flex-direction: column; gap: 8px; margin-bottom: 26px; }
+  .chip { text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+  .chip:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .doclist { display: flex; flex-wrap: wrap; gap: 6px; }
+  .doclist span { background: var(--sunken); border-radius: 6px; padding: 3px 9px; font-size: 13px; color: var(--muted); }
+
+  .q { align-self: flex-end; max-width: 85%; background: var(--accent); color: var(--accent-ink); padding: 10px 15px; border-radius: 16px 16px 4px 16px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .a { background: var(--surface); border: 1px solid var(--line); border-radius: 4px 16px 16px 16px; padding: 18px 20px 14px; box-shadow: var(--shadow); }
+  .a-text { font: 17px/1.62 var(--read); white-space: pre-wrap; overflow-wrap: anywhere; }
+  .a-text code { font: 14px/1.4 ui-monospace, Consolas, monospace; background: var(--sunken); padding: 1px 5px; border-radius: 4px; }
+  .a.refused { background: var(--warn-bg); border-color: transparent; box-shadow: none; }
+  .a.refused .a-text { color: var(--warn-ink); font: 15px/1.5 var(--ui); }
+  .a.error { border-color: var(--danger); box-shadow: none; }
+  .a.error .a-text { color: var(--danger); font: 15px/1.5 var(--ui); }
+  .hint { margin: 6px 0 0; font-size: 13px; color: var(--warn-ink); opacity: .85; }
+  .cite { font: 600 11px/1 var(--ui); vertical-align: 3px; margin: 0 1px; padding: 3px 6px; border: 0; border-radius: 6px; background: var(--accent-soft); color: var(--accent); }
+  .cite:hover { background: var(--accent); color: var(--accent-ink); }
+  .dots span { display: inline-block; width: 6px; height: 6px; margin-right: 4px; border-radius: 50%; background: var(--muted); animation: blink 1.2s infinite both; }
+  .dots span:nth-child(2) { animation-delay: .2s; } .dots span:nth-child(3) { animation-delay: .4s; }
+  @keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .dots span { animation: none; } }
+
+  .sources { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+  .source { display: grid; grid-template-columns: 26px 1fr; gap: 10px; padding: 10px 12px; background: var(--sunken); border-radius: 10px; border: 1px solid transparent; }
+  .source.flash { border-color: var(--accent); background: var(--accent-soft); }
+  .num { width: 24px; height: 24px; border-radius: 6px; background: var(--accent); color: var(--accent-ink); font: 600 12px/24px var(--ui); text-align: center; }
+  .src-head { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
+  .src-head small { font-weight: 400; color: var(--muted); margin-left: 6px; white-space: nowrap; }
+  .snippet { margin: 4px 0 0; font-size: 13px; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .source.open .snippet { display: block; }
+  .more { border: 0; background: none; padding: 0; margin-top: 4px; font-size: 12px; color: var(--accent); }
+  .meta { margin-top: 12px; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; }
+  .rate { margin-left: auto; display: flex; gap: 6px; }
+  .rate button { border: 1px solid var(--line); background: none; color: var(--muted); border-radius: 6px; padding: 3px 9px; font-size: 12px; }
+  .rate button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+  .rate button:disabled { opacity: .5; cursor: default; }
+
+  /* Composer */
+  .composer-wrap { border-top: 1px solid var(--line); background: var(--surface); padding: 14px 20px 16px; }
+  #composer { max-width: 720px; margin: 0 auto; display: flex; gap: 10px; align-items: flex-end; }
+  #q { flex: 1; resize: none; max-height: 160px; font: 16px/1.45 var(--ui); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 11px 14px; }
+  #q:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: transparent; }
+  #send { border: 0; background: var(--accent); color: var(--accent-ink); font-weight: 600; padding: 11px 20px; border-radius: 12px; }
+  #send:disabled { opacity: .5; cursor: default; }
+  .fine { max-width: 720px; margin: 8px auto 0; font-size: 12px; color: var(--muted); }
+
+  /* Documents drawer */
+  #drawer { position: fixed; inset: 0 0 0 auto; width: min(400px, 100%); background: var(--surface); border-left: 1px solid var(--line); box-shadow: var(--shadow); display: flex; flex-direction: column; z-index: 5; }
+  #drawer[hidden] { display: none; }
+  .drawer-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+  .drawer-head h2 { margin: 0; font-size: 16px; }
+  .drawer-body { padding: 14px 18px; overflow-y: auto; flex: 1; }
+  .doc { padding: 10px 0; border-bottom: 1px solid var(--line); display: flex; gap: 10px; align-items: flex-start; }
+  .doc-name { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
+  .doc-info { font-size: 12px; color: var(--muted); }
+  .doc .btn { margin-left: auto; font-size: 12px; padding: 4px 9px; }
+  .doc .btn.sure { border-color: var(--danger); color: var(--danger); }
+  .upload { display: block; margin-top: 16px; padding: 14px; border: 1px dashed var(--line); border-radius: 10px; text-align: center; color: var(--muted); cursor: pointer; }
+  .upload:hover { border-color: var(--accent); color: var(--accent); }
+  .upload input { display: none; }
+  .note { margin-top: 10px; font-size: 13px; color: var(--muted); }
+  .note.bad { color: var(--danger); }
+
+  dialog { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--ink); padding: 20px; width: min(380px, 92vw); }
+  dialog::backdrop { background: rgba(0, 0, 0, .4); }
+  dialog h2 { margin: 0 0 6px; font-size: 17px; }
+  dialog p { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
+  dialog input { width: 100%; font: inherit; padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink); }
+  dialog .row { display: flex; justify-content: flex-end; gap: 8px; margin-top: 14px; }
+
+  @media (max-width: 560px) {
+    .top { padding: 10px 14px; } .status { display: none; } .brand { margin-right: auto; }
+    #thread { padding: 18px 14px; } .composer-wrap { padding: 10px 14px 12px; }
+    .empty h1 { font-size: 24px; } .a { padding: 14px 15px 12px; } .q { max-width: 92%; }
+  }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="mark" aria-hidden="true"></span>Document Q&amp;A</div>
+    <span class="status" id="status">Connecting…</span>
+    <button class="btn" id="docsBtn" type="button">Documents</button>
+    <button class="btn" id="newChat" type="button">New chat</button>
+  </header>
+
+  <div id="scroll">
+    <main id="thread">
+      <section class="empty" id="empty">
+        <h1>Ask your documents a question</h1>
+        <p>Answers come only from the indexed PDFs. Each one shows the pages it was taken from, and the assistant says so when the documents do not cover a question.</p>
+        <div id="examples" hidden>
+          <p class="label">Try one</p>
+          <div class="chips" id="chips"></div>
+        </div>
+        <p class="label" id="doclabel" hidden>Indexed documents</p>
+        <div class="doclist" id="doclist"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="composer-wrap">
+    <form id="composer">
+      <textarea id="q" rows="1" placeholder="Ask a question" aria-label="Your question" maxlength="2000"></textarea>
+      <button id="send" type="submit">Ask</button>
+    </form>
+    <p class="fine">Enter to send, Shift + Enter for a new line. Follow-up questions remember this chat.</p>
+  </div>
+
+  <aside id="drawer" hidden aria-label="Documents">
+    <div class="drawer-head"><h2>Documents</h2><button class="btn" id="closeDrawer" type="button">Close</button></div>
+    <div class="drawer-body">
+      <div id="docs"></div>
+      <label class="upload"><input type="file" id="file" accept="application/pdf,.pdf">Add a PDF, or replace one with the same file name</label>
+      <p class="note" id="docNote" role="status"></p>
+    </div>
+  </aside>
+
+  <dialog id="keyDialog">
+    <form method="dialog">
+      <h2>API key needed</h2>
+      <p>This server is protected. Enter its API key. It is kept only in this browser.</p>
+      <input id="keyInput" type="password" autocomplete="off" aria-label="API key">
+      <div class="row"><button class="btn" value="cancel">Cancel</button><button class="btn" value="ok">Continue</button></div>
+    </form>
+  </dialog>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const EXAMPLES = {
+  "attention_is_all_you_need.pdf": "What BLEU score did the Transformer reach on English-to-German?",
+  "self_rag.pdf": "What are the four types of reflection tokens in Self-RAG?",
+  "dense_passage_retrieval.pdf": "Why does BM25 perform better than DPR on SQuAD?",
+  "ragas.pdf": "How is the Ragas faithfulness score computed?",
+};
+let sessionId = newSession();
+let busy = false;
+
+function newSession() { return (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(16).slice(2)); }
+function storedKey() { try { return localStorage.getItem("docqa_key") || ""; } catch { return ""; } }
+function saveKey(k) { try { localStorage.setItem("docqa_key", k); } catch {} }
+
+function askForKey() {
+  return new Promise((resolve) => {
+    const dialog = $("keyDialog");
+    $("keyInput").value = "";
+    dialog.onclose = () => {
+      const key = dialog.returnValue === "ok" ? $("keyInput").value.trim() : "";
+      if (key) saveKey(key);
+      resolve(Boolean(key));
+    };
+    dialog.showModal();
+  });
+}
+
+// fetch with the API key attached. On 401 it asks for the key once and retries.
+async function api(path, options = {}, retried = false) {
+  const headers = new Headers(options.headers || {});
+  if (storedKey()) headers.set("X-API-Key", storedKey());
+  const response = await fetch(path, { ...options, headers });
+  if (response.status === 401 && !retried && await askForKey()) return api(path, options, true);
+  return response;
+}
+
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+function prettyName(file) { return file.replace(/\.pdf$/i, "").replace(/[_-]+/g, " "); }
+function scrollDown() { const s = $("scroll"); s.scrollTop = s.scrollHeight; }
+
+// Answer text is inserted as text nodes only, never as HTML. Citation marks become buttons.
+function renderAnswer(target, text, card) {
+  target.replaceChildren();
+  for (const part of text.split(/(\[\d+\]|\*\*[^*\n]+\*\*|`[^`\n]+`)/)) {
+    if (/^\*\*.+\*\*$/.test(part)) { target.append(el("strong", "", part.slice(2, -2))); continue; }
+    if (/^`.+`$/.test(part)) { target.append(el("code", "", part.slice(1, -1))); continue; }
+    const m = part.match(/^\[(\d+)\]$/);
+    if (!m) { target.append(part); continue; }
+    const button = el("button", "cite", m[1]);
+    button.type = "button";
+    button.title = "Show source " + m[1];
+    button.onclick = () => {
+      const source = card.querySelector('.source[data-n="' + m[1] + '"]');
+      if (!source) return;
+      source.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      source.classList.add("flash");
+      setTimeout(() => source.classList.remove("flash"), 1400);
+    };
+    target.append(button);
+  }
+}
+
+function renderSources(card, sources) {
+  if (!sources.length) return;
+  const box = el("div", "sources");
+  for (const s of sources) {
+    const row = el("div", "source");
+    row.dataset.n = s.id;
+    const body = el("div");
+    const head = el("div", "src-head", prettyName(s.source));
+    head.append(el("small", "", "page " + s.page + (s.date ? " · " + s.date.slice(0, 4) : "")));
+    const snippet = el("p", "snippet", s.text.trim());
+    const more = el("button", "more", "Show more");
+    more.type = "button";
+    more.onclick = () => { more.textContent = row.classList.toggle("open") ? "Show less" : "Show more"; };
+    body.append(head, snippet, more);
+    row.append(el("div", "num", String(s.id)), body);
+    box.append(row);
+  }
+  card.append(box);
+}
+
+function renderMeta(card, done) {
+  const meta = el("div", "meta");
+  const seconds = (done.timings.total_ms / 1000).toFixed(done.timings.total_ms < 100 ? 2 : 1);
+  meta.append(el("span", "", seconds + " s"));
+  if (done.cached) meta.append(el("span", "", "from cache"));
+  else if (done.model !== "none") meta.append(el("span", "", done.model.split("/").pop()));
+  if (done.sources.length) meta.append(el("span", "", done.sources.length + (done.sources.length === 1 ? " source" : " sources")));
+
+  // Thumbs up / down, stored against this answer's request id.
+  const rate = el("span", "rate");
+  const buttons = [["up", "Helpful"], ["down", "Not helpful"]].map(([rating, label]) => {
+    const button = el("button", "", label);
+    button.type = "button";
+    button.onclick = async () => {
+      buttons.forEach((b) => { b.disabled = true; });
+      const r = await api("/feedback", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ request_id: done.request_id, rating }),
+      }).catch(() => null);
+      if (r && r.ok) rate.replaceChildren("Thanks for the feedback");
+      else buttons.forEach((b) => { b.disabled = false; });
+    };
+    return button;
+  });
+  rate.append(...buttons);
+  meta.append(rate);
+  card.append(meta);
+}
+
+async function ask(question) {
+  if (busy || !question.trim()) return;
+  busy = true; $("send").disabled = true;
+  $("empty").hidden = true;
+  $("thread").append(el("div", "q", question.trim()));
+  const card = el("article", "a");
+  const text = el("div", "a-text");
+  const dots = el("span", "dots");
+  dots.setAttribute("aria-label", "Searching the documents");
+  dots.append(el("span"), el("span"), el("span"));
+  text.append(dots);
+  card.append(text);
+  $("thread").append(card);
+  scrollDown();
+
+  let answer = "", finished = false;
+  const fail = (message) => { card.classList.add("error"); text.textContent = message; finished = true; };
+  try {
+    const response = await api("/ask", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question: question.trim(), session_id: sessionId }),
+    });
+    if (!response.ok || !response.body) {
+      const detail = await response.json().then((j) => j.detail).catch(() => "");
+      fail(response.status === 401 ? "An API key is needed to ask questions." : (typeof detail === "string" && detail) || "The server could not answer (error " + response.status + ").");
+    } else {
+      const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+      let buffer = "";
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        buffer += value;
+        let cut;
+        while ((cut = buffer.indexOf("\n\n")) >= 0) {
+          const block = buffer.slice(0, cut); buffer = buffer.slice(cut + 2);
+          const data = block.split("\n").find((line) => line.startsWith("data: "));
+          if (!data) continue;
+          const event = JSON.parse(data.slice(6));
+          if (event.type === "token") { answer += event.text; renderAnswer(text, answer, card); scrollDown(); }
+          else if (event.type === "error") fail(event.detail);
+          else if (event.type === "done") {
+            finished = true;
+            renderAnswer(text, event.answer, card);
+            if (event.refused) {
+              card.classList.add("refused");
+              card.append(el("p", "hint", "Nothing in the indexed documents answers this. Try rephrasing, or add the document that covers it."));
+            }
+            renderSources(card, event.sources);
+            renderMeta(card, event);
+          }
+        }
+      }
+      if (!finished) fail("The connection closed before the answer finished. Please ask again.");
+    }
+  } catch (error) {
+    fail("Could not reach the server. Check that it is running, then ask again.");
+  }
+  busy = false; $("send").disabled = false;
+  scrollDown(); $("q").focus();
+}
+
+async function refresh() {
+  try {
+    const health = await fetch("/health").then((r) => r.json());
+    $("status").textContent = health.documents + (health.documents === 1 ? " document" : " documents") + " · " + health.chunks.toLocaleString() + " passages";
+  } catch { $("status").textContent = "Server not reachable"; return; }
+  const response = await api("/documents");
+  if (!response.ok) return;
+  const docs = await response.json();
+
+  $("doclist").replaceChildren(...docs.map((d) => el("span", "", prettyName(d.name))));
+  $("doclabel").hidden = !docs.length;
+  const examples = docs.map((d) => EXAMPLES[d.name]).filter(Boolean);
+  $("chips").replaceChildren(...examples.map((q) => {
+    const chip = el("button", "chip", q);
+    chip.type = "button";
+    chip.onclick = () => ask(q);
+    return chip;
+  }));
+  $("examples").hidden = !examples.length;
+
+  $("docs").replaceChildren(...docs.map((d) => {
+    const row = el("div", "doc");
+    const info = el("div");
+    info.append(el("div", "doc-name", d.name), el("div", "doc-info", d.pages + " pages · " + d.chunks + " passages · " + d.doc_date));
+    const remove = el("button", "btn", "Remove");
+    remove.type = "button";
+    remove.onclick = async () => {
+      if (!remove.classList.contains("sure")) {  // first click arms the button, second click deletes
+        remove.classList.add("sure"); remove.textContent = "Confirm remove";
+        setTimeout(() => { remove.classList.remove("sure"); remove.textContent = "Remove"; }, 4000);
+        return;
+      }
+      remove.disabled = true;
+      const r = await api("/documents/" + encodeURIComponent(d.name), { method: "DELETE" });
+      note(r.ok ? "Removed " + d.name + "." : "Could not remove " + d.name + ".", !r.ok);
+      refresh();
+    };
+    row.append(info, remove);
+    return row;
+  }));
+  if (!docs.length) $("docs").append(el("p", "note", "No documents are indexed yet. Add a PDF below."));
+}
+
+function note(message, bad = false) { $("docNote").textContent = message; $("docNote").className = bad ? "note bad" : "note"; }
+
+$("file").onchange = async () => {
+  const file = $("file").files[0];
+  if (!file) return;
+  note("Indexing " + file.name + "… this can take a minute for a long PDF.");
+  const form = new FormData();
+  form.append("file", file);
+  try {
+    const r = await api("/documents", { method: "POST", body: form });
+    let job = await r.json().catch(() => ({}));
+    if (!r.ok) note(typeof job.detail === "string" ? job.detail : "Upload failed (error " + r.status + ").", true);
+    else {
+      // The server indexes in the background. Ask how it is going once a second.
+      while (job.status === "queued" || job.status === "processing") {
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        job = await api("/documents/jobs/" + job.job_id).then((s) => s.json());
+      }
+      if (job.status === "done") note(file.name + ": " + job.result + " (" + job.chunks + " passages).");
+      else note(job.error || "Indexing failed.", true);
+    }
+  } catch { note("Upload failed: the server could not be reached.", true); }
+  $("file").value = "";
+  refresh();
+};
+
+$("composer").onsubmit = (event) => {
+  event.preventDefault();
+  const question = $("q").value;
+  if (busy || !question.trim()) return;
+  $("q").value = ""; $("q").style.height = "auto";
+  ask(question);
+};
+$("q").onkeydown = (event) => {
+  if (event.key === "Enter" && !event.shiftKey && !event.isComposing) { event.preventDefault(); $("composer").requestSubmit(); }
+};
+$("q").oninput = () => { $("q").style.height = "auto"; $("q").style.height = Math.min($("q").scrollHeight, 160) + "px"; };
+$("newChat").onclick = () => {
+  if (busy) return;
+  sessionId = newSession();
+  $("thread").replaceChildren($("empty"));
+  $("empty").hidden = false;
+  $("q").focus();
+};
+$("docsBtn").onclick = () => { $("drawer").hidden = false; note(""); };
+$("closeDrawer").onclick = () => { $("drawer").hidden = true; };
+document.addEventListener("keydown", (event) => { if (event.key === "Escape") $("drawer").hidden = true; });
+
+refresh();
+$("q").focus();
+</script>
+</body>
+</html>

@@ -1,0 +1,2730 @@
+{
+ "summary": {
+  "label": "hybrid_chunk220",
+  "mode": "hybrid",
+  "chunk_words": 220,
+  "chunk_overlap": 40,
+  "questions": 100,
+  "recall@5": 0.82,
+  "recall@1": 0.46,
+  "mrr": 0.587,
+  "retrieve_ms_p50": 35.5,
+  "min_score": 0.55,
+  "out_of_scope_refused": 0.3,
+  "answerable_wrongly_refused": 0.0
+ },
+ "out_of_scope_confidence": [
+  0.5165861877387873,
+  0.5804041808979703,
+  0.560364509868569,
+  0.4953453729377797,
+  0.5778503360291711,
+  0.6448331841572992,
+  0.5598521606200559,
+  0.5166804982764135,
+  0.7436256133777622,
+  0.7250219965733203
+ ],
+ "rows": [
+  {
+   "id": "att-01",
+   "rank": 1,
+   "confidence": 0.8,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     10
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     1
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "att-02",
+   "rank": 1,
+   "confidence": 0.736,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     1
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     10
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "att-03",
+   "rank": 1,
+   "confidence": 0.853,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     5
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "att-04",
+   "rank": 1,
+   "confidence": 0.773,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     5
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     2
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     4
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "att-05",
+   "rank": 1,
+   "confidence": 0.787,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     7
+    ],
+    [
+     "bert.pdf",
+     13
+    ],
+    [
+     "self_rag.pdf",
+     19
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "att-06",
+   "rank": null,
+   "confidence": 0.753,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     10
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     10
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "att-07",
+   "rank": 1,
+   "confidence": 0.738,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     7
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     1
+    ],
+    [
+     "self_rag.pdf",
+     19
+    ],
+    [
+     "bert.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "att-08",
+   "rank": 1,
+   "confidence": 0.746,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     8
+    ],
+    [
+     "bert.pdf",
+     8
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "att-09",
+   "rank": 1,
+   "confidence": 0.765,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     5
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "att-10",
+   "rank": 1,
+   "confidence": 0.811,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     7
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     7
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "bert-01",
+   "rank": 2,
+   "confidence": 0.822,
+   "retrieved": [
+    [
+     "bert.pdf",
+     5
+    ],
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     8
+    ],
+    [
+     "bert.pdf",
+     14
+    ]
+   ]
+  },
+  {
+   "id": "bert-02",
+   "rank": 1,
+   "confidence": 0.853,
+   "retrieved": [
+    [
+     "bert.pdf",
+     13
+    ],
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     4
+    ],
+    [
+     "bert.pdf",
+     4
+    ],
+    [
+     "bert.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "bert-03",
+   "rank": 1,
+   "confidence": 0.836,
+   "retrieved": [
+    [
+     "bert.pdf",
+     4
+    ],
+    [
+     "bert.pdf",
+     16
+    ],
+    [
+     "bert.pdf",
+     12
+    ],
+    [
+     "bert.pdf",
+     16
+    ],
+    [
+     "bert.pdf",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "bert-04",
+   "rank": 1,
+   "confidence": 0.68,
+   "retrieved": [
+    [
+     "bert.pdf",
+     6
+    ],
+    [
+     "bert.pdf",
+     6
+    ],
+    [
+     "bert.pdf",
+     5
+    ],
+    [
+     "bert.pdf",
+     8
+    ],
+    [
+     "bert.pdf",
+     14
+    ]
+   ]
+  },
+  {
+   "id": "bert-05",
+   "rank": 1,
+   "confidence": 0.786,
+   "retrieved": [
+    [
+     "bert.pdf",
+     7
+    ],
+    [
+     "bert.pdf",
+     7
+    ],
+    [
+     "bert.pdf",
+     9
+    ],
+    [
+     "bert.pdf",
+     1
+    ],
+    [
+     "bert.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "bert-06",
+   "rank": 1,
+   "confidence": 0.794,
+   "retrieved": [
+    [
+     "bert.pdf",
+     7
+    ],
+    [
+     "bert.pdf",
+     7
+    ],
+    [
+     "bert.pdf",
+     9
+    ],
+    [
+     "bert.pdf",
+     1
+    ],
+    [
+     "bert.pdf",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "bert-07",
+   "rank": 1,
+   "confidence": 0.8,
+   "retrieved": [
+    [
+     "bert.pdf",
+     5
+    ],
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     2
+    ],
+    [
+     "bert.pdf",
+     14
+    ]
+   ]
+  },
+  {
+   "id": "bert-08",
+   "rank": 4,
+   "confidence": 0.817,
+   "retrieved": [
+    [
+     "bert.pdf",
+     15
+    ],
+    [
+     "bert.pdf",
+     14
+    ],
+    [
+     "bert.pdf",
+     5
+    ],
+    [
+     "bert.pdf",
+     4
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "bert-09",
+   "rank": 2,
+   "confidence": 0.751,
+   "retrieved": [
+    [
+     "bert.pdf",
+     9
+    ],
+    [
+     "bert.pdf",
+     4
+    ],
+    [
+     "bert.pdf",
+     14
+    ],
+    [
+     "bert.pdf",
+     13
+    ],
+    [
+     "bert.pdf",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "bert-10",
+   "rank": 2,
+   "confidence": 0.82,
+   "retrieved": [
+    [
+     "bert.pdf",
+     14
+    ],
+    [
+     "bert.pdf",
+     13
+    ],
+    [
+     "bert.pdf",
+     16
+    ],
+    [
+     "bert.pdf",
+     13
+    ],
+    [
+     "bert.pdf",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "sbert-01",
+   "rank": 1,
+   "confidence": 0.881,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     2
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ],
+    [
+     "sentence_bert.pdf",
+     2
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "sbert-02",
+   "rank": 1,
+   "confidence": 0.911,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     1
+    ],
+    [
+     "sentence_bert.pdf",
+     3
+    ],
+    [
+     "sentence_bert.pdf",
+     3
+    ],
+    [
+     "sentence_bert.pdf",
+     2
+    ],
+    [
+     "sentence_bert.pdf",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "sbert-03",
+   "rank": 1,
+   "confidence": 0.865,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     3
+    ],
+    [
+     "sentence_bert.pdf",
+     3
+    ],
+    [
+     "bert.pdf",
+     14
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "sbert-04",
+   "rank": 3,
+   "confidence": 0.727,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     4
+    ],
+    [
+     "sentence_bert.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "sbert-05",
+   "rank": 1,
+   "confidence": 0.787,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     4
+    ],
+    [
+     "sentence_bert.pdf",
+     2
+    ],
+    [
+     "sentence_bert.pdf",
+     3
+    ],
+    [
+     "beir.pdf",
+     4
+    ],
+    [
+     "beir.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "sbert-06",
+   "rank": 4,
+   "confidence": 0.819,
+   "retrieved": [
+    [
+     "bert.pdf",
+     13
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     2
+    ],
+    [
+     "sentence_bert.pdf",
+     4
+    ],
+    [
+     "bert.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "sbert-07",
+   "rank": 1,
+   "confidence": 0.732,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     3
+    ],
+    [
+     "sentence_bert.pdf",
+     6
+    ],
+    [
+     "sentence_bert.pdf",
+     4
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "sbert-08",
+   "rank": 1,
+   "confidence": 0.74,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ],
+    [
+     "sentence_bert.pdf",
+     4
+    ],
+    [
+     "sentence_bert.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "sbert-09",
+   "rank": null,
+   "confidence": 0.779,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     6
+    ],
+    [
+     "sentence_bert.pdf",
+     8
+    ],
+    [
+     "sentence_bert.pdf",
+     5
+    ],
+    [
+     "sentence_bert.pdf",
+     2
+    ],
+    [
+     "sentence_bert.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "sbert-10",
+   "rank": 1,
+   "confidence": 0.848,
+   "retrieved": [
+    [
+     "sentence_bert.pdf",
+     2
+    ],
+    [
+     "sentence_bert.pdf",
+     5
+    ],
+    [
+     "sentence_bert.pdf",
+     2
+    ],
+    [
+     "sentence_bert.pdf",
+     5
+    ],
+    [
+     "bert.pdf",
+     15
+    ]
+   ]
+  },
+  {
+   "id": "dpr-01",
+   "rank": null,
+   "confidence": 0.85,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     6
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     2
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     12
+    ]
+   ]
+  },
+  {
+   "id": "dpr-02",
+   "rank": 4,
+   "confidence": 0.769,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     2
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     8
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     7
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     4
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "dpr-03",
+   "rank": 5,
+   "confidence": 0.671,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     20
+    ],
+    [
+     "rag.pdf",
+     4
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     20
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "dpr-04",
+   "rank": 1,
+   "confidence": 0.812,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     3
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     12
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     7
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     12
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "dpr-05",
+   "rank": null,
+   "confidence": 0.759,
+   "retrieved": [
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     6
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     5
+    ],
+    [
+     "attention_is_all_you_need.pdf",
+     3
+    ],
+    [
+     "beir.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "dpr-06",
+   "rank": 4,
+   "confidence": 0.761,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     6
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     3
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     12
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     4
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "dpr-07",
+   "rank": 1,
+   "confidence": 0.804,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     6
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     7
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "dpr-08",
+   "rank": 1,
+   "confidence": 0.739,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     7
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     8
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     12
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "dpr-09",
+   "rank": 1,
+   "confidence": 0.802,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     7
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     3
+    ],
+    [
+     "hyde.pdf",
+     8
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "dpr-10",
+   "rank": 1,
+   "confidence": 0.797,
+   "retrieved": [
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     8
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     5
+    ],
+    [
+     "dense_passage_retrieval.pdf",
+     12
+    ]
+   ]
+  },
+  {
+   "id": "colbert-01",
+   "rank": 4,
+   "confidence": 0.893,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     8
+    ],
+    [
+     "colbert.pdf",
+     7
+    ],
+    [
+     "colbert.pdf",
+     1
+    ],
+    [
+     "colbert.pdf",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "colbert-02",
+   "rank": 1,
+   "confidence": 0.878,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     2
+    ],
+    [
+     "colbert.pdf",
+     1
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "colbert-03",
+   "rank": 5,
+   "confidence": 0.792,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     5
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     5
+    ],
+    [
+     "colbert.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "colbert-04",
+   "rank": 3,
+   "confidence": 0.778,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     5
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "colbert-05",
+   "rank": 2,
+   "confidence": 0.694,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     7
+    ],
+    [
+     "colbert.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "colbert-06",
+   "rank": 1,
+   "confidence": 0.78,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     5
+    ],
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     2
+    ],
+    [
+     "colbert.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "colbert-07",
+   "rank": 2,
+   "confidence": 0.802,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "colbert.pdf",
+     4
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     2
+    ],
+    [
+     "colbert.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "colbert-08",
+   "rank": 5,
+   "confidence": 0.844,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     5
+    ],
+    [
+     "colbert.pdf",
+     5
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     3
+    ],
+    [
+     "colbert.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "colbert-09",
+   "rank": null,
+   "confidence": 0.708,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "colbert.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     8
+    ],
+    [
+     "colbert.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "colbert-10",
+   "rank": 3,
+   "confidence": 0.795,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     1
+    ],
+    [
+     "colbert.pdf",
+     1
+    ],
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "colbert.pdf",
+     3
+    ],
+    [
+     "colbert.pdf",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "rag-01",
+   "rank": 1,
+   "confidence": 0.774,
+   "retrieved": [
+    [
+     "rag.pdf",
+     3
+    ],
+    [
+     "rag.pdf",
+     3
+    ],
+    [
+     "rag.pdf",
+     6
+    ],
+    [
+     "rag.pdf",
+     4
+    ],
+    [
+     "rag.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "rag-02",
+   "rank": 5,
+   "confidence": 0.752,
+   "retrieved": [
+    [
+     "rag.pdf",
+     2
+    ],
+    [
+     "self_rag.pdf",
+     2
+    ],
+    [
+     "rag.pdf",
+     6
+    ],
+    [
+     "rag.pdf",
+     19
+    ],
+    [
+     "rag.pdf",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "rag-03",
+   "rank": 2,
+   "confidence": 0.834,
+   "retrieved": [
+    [
+     "rag.pdf",
+     2
+    ],
+    [
+     "rag.pdf",
+     4
+    ],
+    [
+     "rag.pdf",
+     1
+    ],
+    [
+     "rag.pdf",
+     2
+    ],
+    [
+     "rag.pdf",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "rag-04",
+   "rank": 2,
+   "confidence": 0.815,
+   "retrieved": [
+    [
+     "rag.pdf",
+     7
+    ],
+    [
+     "rag.pdf",
+     4
+    ],
+    [
+     "rag.pdf",
+     4
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "rag.pdf",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "rag-05",
+   "rank": null,
+   "confidence": 0.7,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "rag.pdf",
+     8
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "rag-06",
+   "rank": 1,
+   "confidence": 0.865,
+   "retrieved": [
+    [
+     "rag.pdf",
+     6
+    ],
+    [
+     "rag.pdf",
+     5
+    ],
+    [
+     "rag.pdf",
+     8
+    ],
+    [
+     "rag.pdf",
+     17
+    ],
+    [
+     "rag.pdf",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "rag-07",
+   "rank": 1,
+   "confidence": 0.717,
+   "retrieved": [
+    [
+     "rag.pdf",
+     7
+    ],
+    [
+     "rag.pdf",
+     8
+    ],
+    [
+     "rag.pdf",
+     9
+    ],
+    [
+     "self_rag.pdf",
+     2
+    ],
+    [
+     "rag.pdf",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "rag-08",
+   "rank": 3,
+   "confidence": 0.793,
+   "retrieved": [
+    [
+     "colbert.pdf",
+     6
+    ],
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "rag.pdf",
+     17
+    ],
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "rag.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "rag-09",
+   "rank": 1,
+   "confidence": 0.812,
+   "retrieved": [
+    [
+     "rag.pdf",
+     4
+    ],
+    [
+     "rag.pdf",
+     17
+    ],
+    [
+     "rag.pdf",
+     4
+    ],
+    [
+     "rag.pdf",
+     3
+    ],
+    [
+     "rag.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "rag-10",
+   "rank": null,
+   "confidence": 0.779,
+   "retrieved": [
+    [
+     "rag.pdf",
+     5
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "rag.pdf",
+     18
+    ],
+    [
+     "self_rag.pdf",
+     20
+    ],
+    [
+     "self_rag.pdf",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "beir-01",
+   "rank": 4,
+   "confidence": 0.891,
+   "retrieved": [
+    [
+     "beir.pdf",
+     4
+    ],
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "beir.pdf",
+     17
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "beir-02",
+   "rank": 3,
+   "confidence": 0.843,
+   "retrieved": [
+    [
+     "beir.pdf",
+     4
+    ],
+    [
+     "beir.pdf",
+     17
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "beir.pdf",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "beir-03",
+   "rank": 1,
+   "confidence": 0.825,
+   "retrieved": [
+    [
+     "beir.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     17
+    ],
+    [
+     "beir.pdf",
+     4
+    ],
+    [
+     "beir.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "beir-04",
+   "rank": 3,
+   "confidence": 0.785,
+   "retrieved": [
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "beir.pdf",
+     7
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     17
+    ]
+   ]
+  },
+  {
+   "id": "beir-05",
+   "rank": 1,
+   "confidence": 0.762,
+   "retrieved": [
+    [
+     "beir.pdf",
+     1
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "beir-06",
+   "rank": 1,
+   "confidence": 0.765,
+   "retrieved": [
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "colbert.pdf",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "beir-07",
+   "rank": 1,
+   "confidence": 0.878,
+   "retrieved": [
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     2
+    ],
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "beir.pdf",
+     1
+    ],
+    [
+     "beir.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "beir-08",
+   "rank": null,
+   "confidence": 0.709,
+   "retrieved": [
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "beir.pdf",
+     7
+    ],
+    [
+     "beir.pdf",
+     21
+    ],
+    [
+     "beir.pdf",
+     17
+    ],
+    [
+     "beir.pdf",
+     19
+    ]
+   ]
+  },
+  {
+   "id": "beir-09",
+   "rank": null,
+   "confidence": 0.681,
+   "retrieved": [
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "beir.pdf",
+     8
+    ],
+    [
+     "colbert.pdf",
+     8
+    ],
+    [
+     "colbert.pdf",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "beir-10",
+   "rank": 1,
+   "confidence": 0.794,
+   "retrieved": [
+    [
+     "beir.pdf",
+     9
+    ],
+    [
+     "beir.pdf",
+     17
+    ],
+    [
+     "beir.pdf",
+     5
+    ],
+    [
+     "beir.pdf",
+     4
+    ],
+    [
+     "beir.pdf",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "hyde-01",
+   "rank": null,
+   "confidence": 0.735,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     5
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     7
+    ],
+    [
+     "hyde.pdf",
+     3
+    ],
+    [
+     "hyde.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "hyde-02",
+   "rank": null,
+   "confidence": 0.793,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     7
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "hyde-03",
+   "rank": 1,
+   "confidence": 0.808,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     1
+    ],
+    [
+     "hyde.pdf",
+     3
+    ],
+    [
+     "hyde.pdf",
+     4
+    ],
+    [
+     "hyde.pdf",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "hyde-04",
+   "rank": 2,
+   "confidence": 0.662,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     17
+    ],
+    [
+     "hyde.pdf",
+     4
+    ],
+    [
+     "hyde.pdf",
+     7
+    ],
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "hyde-05",
+   "rank": 2,
+   "confidence": 0.687,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     4
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "hyde-06",
+   "rank": 4,
+   "confidence": 0.76,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     5
+    ],
+    [
+     "hyde.pdf",
+     1
+    ],
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     4
+    ],
+    [
+     "hyde.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "hyde-07",
+   "rank": 1,
+   "confidence": 0.676,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     4
+    ],
+    [
+     "hyde.pdf",
+     5
+    ],
+    [
+     "rag.pdf",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "hyde-08",
+   "rank": 2,
+   "confidence": 0.74,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     4
+    ],
+    [
+     "hyde.pdf",
+     4
+    ],
+    [
+     "hyde.pdf",
+     5
+    ],
+    [
+     "hyde.pdf",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "hyde-09",
+   "rank": 2,
+   "confidence": 0.772,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     7
+    ],
+    [
+     "hyde.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "hyde-10",
+   "rank": 1,
+   "confidence": 0.845,
+   "retrieved": [
+    [
+     "hyde.pdf",
+     4
+    ],
+    [
+     "hyde.pdf",
+     4
+    ],
+    [
+     "hyde.pdf",
+     6
+    ],
+    [
+     "hyde.pdf",
+     2
+    ],
+    [
+     "hyde.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "ragas-01",
+   "rank": 1,
+   "confidence": 0.753,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     3
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "ragas.pdf",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "ragas-02",
+   "rank": 4,
+   "confidence": 0.765,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "ragas.pdf",
+     3
+    ],
+    [
+     "ragas.pdf",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "ragas-03",
+   "rank": 3,
+   "confidence": 0.864,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "ragas.pdf",
+     3
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "rag.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "ragas-04",
+   "rank": null,
+   "confidence": 0.764,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "ragas.pdf",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "ragas-05",
+   "rank": 5,
+   "confidence": 0.879,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "ragas-06",
+   "rank": 2,
+   "confidence": 0.809,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     4
+    ],
+    [
+     "ragas.pdf",
+     4
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "ragas-07",
+   "rank": 3,
+   "confidence": 0.764,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ]
+   ]
+  },
+  {
+   "id": "ragas-08",
+   "rank": 1,
+   "confidence": 0.803,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "ragas-09",
+   "rank": 1,
+   "confidence": 0.72,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "ragas.pdf",
+     2
+    ],
+    [
+     "self_rag.pdf",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "ragas-10",
+   "rank": 2,
+   "confidence": 0.815,
+   "retrieved": [
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     4
+    ],
+    [
+     "ragas.pdf",
+     5
+    ],
+    [
+     "ragas.pdf",
+     4
+    ],
+    [
+     "ragas.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "selfrag-01",
+   "rank": 4,
+   "confidence": 0.825,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     17
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "self_rag.pdf",
+     2
+    ],
+    [
+     "self_rag.pdf",
+     4
+    ],
+    [
+     "self_rag.pdf",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "selfrag-02",
+   "rank": 1,
+   "confidence": 0.855,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     4
+    ],
+    [
+     "self_rag.pdf",
+     4
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "selfrag-03",
+   "rank": null,
+   "confidence": 0.812,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     1
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ]
+   ]
+  },
+  {
+   "id": "selfrag-04",
+   "rank": null,
+   "confidence": 0.723,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "selfrag-05",
+   "rank": null,
+   "confidence": 0.783,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     9
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     18
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "selfrag-06",
+   "rank": null,
+   "confidence": 0.727,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     2
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     17
+    ]
+   ]
+  },
+  {
+   "id": "selfrag-07",
+   "rank": null,
+   "confidence": 0.852,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     1
+    ],
+    [
+     "self_rag.pdf",
+     9
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "selfrag-08",
+   "rank": null,
+   "confidence": 0.746,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     4
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ]
+   ]
+  },
+  {
+   "id": "selfrag-09",
+   "rank": 4,
+   "confidence": 0.79,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "ragas.pdf",
+     1
+    ],
+    [
+     "self_rag.pdf",
+     1
+    ],
+    [
+     "self_rag.pdf",
+     8
+    ],
+    [
+     "self_rag.pdf",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "selfrag-10",
+   "rank": 1,
+   "confidence": 0.781,
+   "retrieved": [
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     6
+    ],
+    [
+     "self_rag.pdf",
+     10
+    ],
+    [
+     "self_rag.pdf",
+     3
+    ],
+    [
+     "self_rag.pdf",
+     1
+    ]
+   ]
+  }
+ ]
+}

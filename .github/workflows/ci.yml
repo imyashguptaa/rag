@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-and-evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      HF_HUB_DISABLE_SYMLINKS_WARNING: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          # Same version as the Dockerfile. Pillow and filelock only ship their security
+          # fixes for Python 3.11 and newer.
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Known vulnerabilities in dependencies
+        run: pip-audit -r requirements.txt
+
+      # Model weights and the evaluation PDFs do not change between runs.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            data/models
+            data/pdfs
+          key: corpus-and-models-${{ hashFiles('scripts/download_corpus.py', 'docqa/config.py') }}
+
+      - name: Unit tests and the 10 prompt-injection tests
+        # The injection tests call Groq and skip themselves when the secret is missing
+        # (for example on pull requests from forks).
+        run: pytest -q
+
+      - name: Download the evaluation corpus
+        run: python scripts/download_corpus.py
+
+      - name: Retrieval evaluation (fails below recall@5 of 0.85)
+        run: python -m eval.run_eval --label ci --min-recall 0.85
+
+      - name: Answer correctness on a 20-question sample (fails below 0.75)
+        if: env.GROQ_API_KEY != ''
+        run: python -m eval.run_eval --label ci_answers --answers --limit 20 --min-correct 0.75
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-results
+          path: eval/results/ci*.json
+
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t docqa .

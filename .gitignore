@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+# Everything under data/ is rebuilt: PDFs by scripts/download_corpus.py, the index by ingestion.
+data/
+eval/results/*.log
+eval/results/ci*.json

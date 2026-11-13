@@ -1,0 +1,24 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.20.0 # same minor version as the pinned qdrant-client
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      API_KEY: ${API_KEY:-}
+      QDRANT_URL: http://qdrant:6333
+    volumes:
+      - app_data:/app/data # PDFs and the SQLite database
+    depends_on:
+      - qdrant
+    restart: unless-stopped
+
+volumes:
+  qdrant_data:
+  app_data:

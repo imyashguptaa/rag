@@ -1,0 +1,4 @@
+# Tools for tests, linting and the dependency audit. Not installed in the Docker image.
+pytest==9.2.0
+ruff==0.17.5
+pip-audit==2.10.1

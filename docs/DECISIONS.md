@@ -153,7 +153,7 @@ waiting out a rate limit. Batch work (`llm.complete`, used by evaluation) still 
 retries on one model, so evaluation numbers are never mixed across models.
 
 ### No LangChain or LlamaIndex
-**Why:** the whole pipeline is under 900 lines of plain Python. Every step is visible, testable
+**Why:** the whole application is about 1,100 lines of plain Python. Every step is visible, testable
 and measurable. A framework would hide exactly the parts this project is about.
 
 ### Prompt and citations
